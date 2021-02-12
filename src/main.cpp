@@ -12,25 +12,26 @@ int main()
 
   std::string platformName = getPlatformName();
   std::cout << "hello mraa" << std::endl
-            << " Version: " << getVersion() << std::endl
+            << " Version: " << getPlatformVersion() << std::endl
             << " Running on " << platformName << std::endl;
 
   unsigned int pinCount = getPinCount();
   std::cout << "Pin count: " << pinCount << std::endl;
 
-  // for (int i = 0; i < 10; i++)
-  // {
-  //   try
-  //   {
-  //     Led led = new Led(i);
-  //     int maxBrightness = led.readMaxBrightness();
-  //     std::cout << "Led " << i << " max brightness: " << maxBrightness << std::endl;
-  //   }
-  //   catch (std::invalid_argument)
-  //   {
-  //     std::cerr << "Led index " << i << " invalid" << std::endl;
-  //   }
-  // }
+  const int START = 0;
+  const int END = 10;
+  for (int i = START; i < END; i++)
+  {
+    try
+    {
+      Led led = new Led(i);
+      int maxBrightness = led.readMaxBrightness();
+      std::cout << "Led " << i << " max brightness: " << maxBrightness << std::endl;
+    }
+    catch (std::invalid_argument)
+    {
+        }
+  }
 
   mraa_deinit();
   return MRAA_SUCCESS;
