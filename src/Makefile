@@ -3,6 +3,9 @@ CCFLAGS="-g"
 libName="libmraa.so"
 hasLibrary=$(shell if test -f "${LIBRARY_PATH}/${libName}"; then echo "true"; else echo "false"; fi)
 
+HOST="root"
+IP="192.168.0.150"
+
 default: main.cpp
 	@echo "LIBRARY_PATH=$(LIBRARY_PATH)"
 	@echo "libName=${libName}"
@@ -10,7 +13,7 @@ default: main.cpp
 	$(CC) $(CCFLAGS) $^ -l mraa -o ../dist/wow
 
 cp:
-	scp -r ./ root@10.0.0.5:~/everyone-say-wow/src/
+	scp -r ./ $(HOST)@$(IP):~/everyone-say-wow/src/
 
 watch:
 	while true; do \

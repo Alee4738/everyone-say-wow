@@ -46,6 +46,8 @@ Done
   - cmake said that architecture (i686) was not supported. stupid solution that worked: change CMakeLists.txt to allow it (changed "i586" to "i686")
   - my hello world built and ran fine (for now)
 - migrate from c to cpp
+- I made changes to lib/mraa. I need to figure out how to commit them
+  - https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 Resources
 

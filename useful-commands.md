@@ -1,5 +1,5 @@
-sshedison # bash alias for ssh root@10.0.0.5
-scp -r ./ root@10.0.0.5:~/src/
+sshedison # bash alias for ssh into edison
+scp -r ./ root@<IP>:~/src/ # copy this directory into edison
 
 For my machine,
 export LIBRARY_PATH="/home/andrew/projects-practice/everyone-say-wow/lib/mraa/build/src"
