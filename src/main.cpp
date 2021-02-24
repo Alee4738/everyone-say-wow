@@ -30,7 +30,7 @@ int main()
     }
     catch (std::invalid_argument)
     {
-        }
+    }
   }
 
   mraa_deinit();
