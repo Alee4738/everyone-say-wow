@@ -1,12 +1,6 @@
 Goal: Make a button that says "errione-say-wow" (everyone say wow)
 
 Doing
-- Making my own library and making sure I can link to it correctly
-  - https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index
-  - (done) Make a static library, use on PC, use on edison
-  - Make a shared library
-  - Use it on PC
-  - Use it on edison
 - I can make a grove LED light up
   - I did make install on the edison, said it installed libraries to /usr/local/include/ (mraa.hpp, mraa.h, etc.) and /usr/local/lib/ (libmraa.so, libmraa.so.2, libmraa.so.2.2.0)
     - But now I'm having problems with linking, something about C code mixing with C++, extern C, ifdef __cplusplus in the header file, and it's still not working
@@ -85,6 +79,10 @@ Done
   - https://git-scm.com/book/en/v2/Git-Tools-Submodules
 - (skipped) I can make the on-board LED light up
   - It says that there are no LEDs, so skip this
+- Making my own library and making sure I can link to it correctly
+  - https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index
+  - Make a static library, use on PC, use on edison
+  - Make a shared library, use on PC, use on edison
 
 Resources
 

@@ -11,3 +11,5 @@ EDISON_MRAA_LIB_PATH="/home/root/everyone-say-wow/lib/mraa/build/src"
 EDISON_MYMATH_LIB_PATH="/home/root/everyone-say-wow/lib/mymath"
 export LIBRARY_PATH="$EDISON_MRAA_LIB_PATH:$EDISON_MYMATH_LIB_PATH"
 export LD_LIBRARY_PATH="$EDISON_MRAA_LIB_PATH:$EDISON_MYMATH_LIB_PATH"
+
+ldd <executable> - see what shared libraries are linked to <executable>

@@ -9,14 +9,14 @@ default: main.c
 	# $(CC) $(CCFLAGS) $^ -o ../dist/wow
 
 hello: hello.c
-	$(CC) $(CCFLAGS) $^ -L ../lib/mymath/bin/static -l mymath -o ../dist/hello
+	$(CC) $(CCFLAGS) $^ -L ../lib/mymath/bin/static -L ../lib/mymath/bin/shared -l mymath -o ../dist/hello
 
 scp:
 	make cp
 
 cp:
 	scp -r ./ $(HOST)@$(IP):~/everyone-say-wow/src/
-	scp -r ../lib/mymath/src/ $(HOST)@$(IP):~/everyone-say-wow/lib/mymath/src/
+	scp -r ../lib/mymath/src/ $(HOST)@$(IP):~/everyone-say-wow/lib/mymath/
 
 watch:
 	while true; do \
