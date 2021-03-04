@@ -4,7 +4,13 @@
 
 int main()
 {
-  mraa_init();
+  // const char *board_name = mraa_get_platform_name();
+  // fprintf(stdout, "hello mraa\n Version: %s\n Running on %s\n", mraa_get_version(), board_name);
+
+  // mraa_deinit();
+  return 0;
+
+  // return MRAA_SUCCESS;
   // Result initResult = init();
   // std::cout << "init() result: " << initResult << std::endl;
 
@@ -33,5 +39,5 @@ int main()
 
   // mraa_deinit();
   // return MRAA_SUCCESS;
-  return 0;
+  // return 0;
 }

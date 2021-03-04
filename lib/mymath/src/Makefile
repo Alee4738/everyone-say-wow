@@ -1,4 +1,4 @@
-default: clean static
+default: static shared
 
 static: multiply.c power.c
 	gcc -c $^

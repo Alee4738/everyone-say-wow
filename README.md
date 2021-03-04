@@ -2,38 +2,12 @@ Goal: Make a button that says "errione-say-wow" (everyone say wow)
 
 Doing
 - I can make a grove LED light up
-  - I did make install on the edison, said it installed libraries to /usr/local/include/ (mraa.hpp, mraa.h, etc.) and /usr/local/lib/ (libmraa.so, libmraa.so.2, libmraa.so.2.2.0)
-    - But now I'm having problems with linking, something about C code mixing with C++, extern C, ifdef __cplusplus in the header file, and it's still not working
-    - If I can't find a solution, then I have to fall back to C instead of C++
-    - I could try recreating the problem on the edison with a smaller example (.h, .c, and .cpp incling the .h)
-  - Problems with segfaults and linked libraries (I think)
-    - Maybe I should just use sudo and install the mraa library in /usr/local/include or wherever the default location is
-root@Wow_Edison:src$ gdb ../dist/wow 
-GNU gdb (GDB) 7.7.1
-...
-Reading symbols from ../dist/wow...done.
-(gdb) r
-Starting program: /home/root/everyone-say-wow/dist/wow 
-warning: Could not load shared library symbols for linux-gate.so.1.
-Do you need "set solib-search-path" or "set sysroot"?
-warning: File "/lib/libthread_db-1.0.so" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
-To enable execution of this file add
-        add-auto-load-safe-path /lib/libthread_db-1.0.so
-line to your configuration file "/home/root/.gdbinit".
-To completely disable this security protection add
-        set auto-load safe-path /
-line to your configuration file "/home/root/.gdbinit".
-For more information about this security protection see the
-"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
-        info "(gdb)Auto-loading safe path"
-warning: Unable to find libthread_db matching inferior's thread library, thread debugging will not be available.
-
-Program received signal SIGSEGV, Segmentation fault.
-0xb7fc1d03 in mraa_gpio_read_dir ()
-   from /home/root/everyone-say-wow/lib/mraa/build/src/libmraa.so.2
+  - Run a .c program of mraa, removing the libraries from the standard location and using -L and -l flags properly
+  - A big problem with mraa code, see [edison only segfaults](./edison-only-segfaults.md)
 
 Todo
 
+- Run .cpp program that uses mraa
 - I can play a single tone on load
 - I can detect the button press
 - I can output a single tone by pressing a button
@@ -79,10 +53,14 @@ Done
   - https://git-scm.com/book/en/v2/Git-Tools-Submodules
 - (skipped) I can make the on-board LED light up
   - It says that there are no LEDs, so skip this
-- Making my own library and making sure I can link to it correctly
+- I'm seeing random segfaults. Making my own library and making sure I can link to it correctly
   - https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index
   - Make a static library, use on PC, use on edison
   - Make a shared library, use on PC, use on edison
+  - I don't think I was using the gcc -l and -L flags together, maybe that was the trick I needed to get the library to link properly without installing it in the standard location
+- Create a cpp headers file that uses C code (extern C and stuff), and use it in my dummy code
+  - Similar to how mraa's cpp bindings work
+
 
 Resources
 
