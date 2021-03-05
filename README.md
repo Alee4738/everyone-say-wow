@@ -1,13 +1,11 @@
 Goal: Make a button that says "errione-say-wow" (everyone say wow)
 
 Doing
-- I can make a grove LED light up
-  - Run a .c program of mraa, removing the libraries from the standard location and using -L and -l flags properly
-  - A big problem with mraa code, see [edison only segfaults](./edison-only-segfaults.md)
+- I can run a hello world program using the Arduino IDE
 
 Todo
 
-- Run .cpp program that uses mraa
+- I can make a grove LED light up
 - I can play a single tone on load
 - I can detect the button press
 - I can output a single tone by pressing a button
@@ -60,6 +58,11 @@ Done
   - I don't think I was using the gcc -l and -L flags together, maybe that was the trick I needed to get the library to link properly without installing it in the standard location
 - Create a cpp headers file that uses C code (extern C and stuff), and use it in my dummy code
   - Similar to how mraa's cpp bindings work
+- Failed to continue using mraa
+  - Run a .c program of mraa, removing the libraries from the standard location and using -L and -l flags properly
+  - A big problem with mraa code, see [edison only segfaults](./edison-only-segfaults.md)
+    - mraa is just not working. Try to go back to the Arduino IDE
+
 
 
 Resources

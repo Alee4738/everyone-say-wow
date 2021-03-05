@@ -53,8 +53,13 @@ Source: https://stackoverflow.com/questions/19981862/what-are-ld-linux-so-2-and-
 - This code was indeed running before. I must've somehow corrupted my system. Maybe I should reset the entire thing to get back to a fresh state.
 
 Options
-- Curr: Reset/reflash the edison, hope the problem goes away
+- Reset/reflash the edison, hope the problem goes away
   - just reflashed the edison and set it up
-  - next step: cmake
+  - ran cmake like usual
+  - ran into the same segfault
+  - Now that I see the examples, I ran into the same segfault that they did
+  - Based on online tutorials, it looks like maybe the version 3.5 of the image I flashed onto the edison wasn't tested or something
+    - People seem to be using [version 1.7.2](https://carlosaln.wordpress.com/tag/edison/https://carlosaln.wordpress.com/tag/edison/)
+  - But how did it work before? I have no idea
+- Choice: Give up. I'll go back to trying with the Arduino IDE
 - Figure out which part of the mraa library code is causing a segfault. Fix it and rebuild
-- Give up
