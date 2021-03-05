@@ -117,5 +117,6 @@ Problems
     - stupid solution that worked: change CMakeLists.txt to allow it (changed "i586" to "i686")
   - cmake examples result in segfaults
     - don't care about those. At least my hello world code built and worked
-  
+- Segfaults using mraa code, see [edison only segfaults](./edison-only-segfaults.md)
+
   
