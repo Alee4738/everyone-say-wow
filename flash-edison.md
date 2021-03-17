@@ -64,7 +64,7 @@ hello world I am logged in
 
 
 ## Output From PC
-
+```
 $ ./flashall.sh 
 Using U-Boot target: edison-blankcdc
 Now waiting for dfu device 8087:0a99
@@ -487,3 +487,4 @@ logout
 Poky (Yocto Project Reference Distro) 1.7.3 edison ttyMFD2
 
 edison login:
+```
