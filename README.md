@@ -5,6 +5,14 @@ Doing
 
 Todo
 
+- Option: don't use mraa or Arduino IDE, use avr library (Arduino uses it)
+- Other options
+  - There are some older yocto images on the intel site that might allow mraa to work
+    - https://downloadcenter.intel.com/download/27074/Intel-Edison-Yocto-Poky-image
+  - there are people who have gotten the arduino ide to work with the edison, but it's using a custom image created by some people who sound pretty smart
+    - https://forum.arduino.cc/index.php?topic=642831.new#new
+    - while going down this rabbit hole, I read that the mraa library specifically depends on some functionality that is old, debugfs or something, and it doesn't quite work
+    - the custom image only offers partial support for mraa
 - I can make a grove LED light up
 - I can play a single tone on load
 - I can detect the button press
