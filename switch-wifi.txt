@@ -1,1 +1,0 @@
-Switch to the correct wifi network in order to contact the edison
